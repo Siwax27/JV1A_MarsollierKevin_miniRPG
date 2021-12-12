@@ -1,0 +1,400 @@
+<!doctype html>
+    <html>
+    <head>
+    <style>
+
+        /*image de fond*/
+        body{
+            background-image: url("image/3t5fh7yf1df61.png") ;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /*nom des monstre*/
+         .nom{
+                display: flex;
+                border: 5px solid white;
+                width : 300px;
+                height : 50px;
+                box-sizing : border-box;
+                background-color:moccasin;
+                position: fixed;
+                align-content: center;
+                flex-wrap: wrap-reverse;
+                justify-content: center;
+                left: 1000px;
+
+                }
+
+        /*afficher les action pour chaque perso*/
+        #attaque{
+            display: flex;
+            border : 5px solid white;
+            width : 70px;
+            margin: 10px;
+            padding: 10px;
+            background-color:moccasin;
+            position: fixed;
+            top: 450px;
+            left: 120px;
+            visibility: hidden;
+        }
+        #attaque2{
+            display: flex;
+            border : 5px solid white;
+            width : 70px;
+            margin: 10px;
+            padding: 10px;
+            background-color:moccasin;
+            position: fixed;
+            top: 600px;
+            left: 120px;
+            visibility: hidden;
+        }
+
+        #attaque3{
+            display: flex;
+            border : 5px solid white;
+            width : 70px;
+            margin: 10px;
+            padding: 10px;
+            background-color:moccasin;
+            position: fixed;
+            top: 700px;
+            left: 120px;
+            visibility: hidden;
+        }
+
+        #attaque4{
+            display: flex;
+            border : 5px solid white;
+            width : 70px;
+            margin: 10px;
+            padding: 10px;
+            background-color:moccasin;
+            position: fixed;
+            top: 800px;
+            left: 120px;
+            visibility: hidden;
+        }
+
+        /*affiche la boite pour attaquer*/
+        #action{
+            display: flex;
+            border: 5px solid white;
+            background-color: moccasin;
+            width: 70px;
+            height: 120px;
+            position: fixed;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items:flex-start;
+            flex-wrap: wrap;
+            flex-direction: column;
+            top: 500px;
+            left: 220px;
+            visibility: hidden;
+        }
+
+        #action2{
+            display: flex;
+            border: 5px solid white;
+            background-color: moccasin;
+            width: 100px;
+            height: 120px;
+            position: fixed;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items:flex-start;
+            flex-wrap: wrap;
+            flex-direction: column;
+            top: 600px;
+            left: 220px;
+            visibility: hidden;
+        }
+
+        #action3{
+            display: flex;
+            border: 5px solid white;
+            background-color: moccasin;
+            width: 100px;
+            height: 120px;
+            position: fixed;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items:flex-start;
+            flex-wrap: wrap;
+            flex-direction: column;
+            top: 700px;
+            left: 220px;
+            visibility: hidden;
+        }
+
+        #action4{
+            display: flex;
+            border: 5px solid white;
+            background-color: moccasin;
+            width: 100px;
+            height: 120px;
+            position: fixed;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items:flex-start;
+            flex-wrap: wrap;
+            flex-direction: column;
+            top: 800px;
+            left: 220px;
+            visibility: hidden;
+        }
+
+
+        /*selection perso*/
+
+        .selection{
+            display: flex;
+            border: 5px solid white;
+            background-color: moccasin;
+            width: 90px;
+            height: 450px;
+            position: fixed;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items:flex-start;
+            flex-wrap: wrap;
+            flex-direction: column;
+            top: 500px;
+            left: 30px;
+        }
+
+         /*nom des personnage*/   
+        .personnage{
+            display: flex;
+            border : 5px solid white;
+            background:moccasin;
+            height: 800px;
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            position: fixed;
+            flex-direction: column;
+            top: 600px;
+            left: 2200px;
+        }
+
+        /*vie de l'ennemi*/
+        .vieennemi{
+            display: flex;
+            position: fixed;
+            top: 600px;
+            left: 500px;
+            visibility: visible;
+        }
+        .vieEnnemiPartie2{
+            display: flex;
+            position: fixed;
+            top: 600px;
+            left: 500px;
+            visibility: hidden;
+        }        
+
+        /* personnage et ennemi*/
+        .perso{
+            display: flex;
+            position: fixed;
+            top: 500px;
+            left: 1000px;
+            order: 5;
+        }
+        .perso2{
+            display: flex;
+            position: fixed;
+            top: 270px;
+            left: 1230px;
+        }
+        .perso3{
+            display: flex;
+            position: fixed;
+            top: 220px;
+            left: 1350px;
+        }
+        .perso4{
+            display: flex;
+            position: fixed;
+            top: 100px;
+            left: 1540px;
+        }
+        .ennemi1{
+            display: flex;
+            position: fixed;
+            top : 200px;
+            left: 250px;
+            visibility: visible;
+        }
+        .ennemiPartie2{
+            display: flex;
+            position: fixed;
+            top: 100px;
+            left: 300px;
+            visibility: hidden;
+        }
+
+        /* info partie*/
+        .infos{
+            display: flex;
+            position: fixed;
+            border: 5px solid white;
+            background-color: turquoise;
+            top: 100px;
+            left: 1000px;
+        }
+
+
+    </style>
+    <script src="main.js" async></script>
+	<body>
+        <div class="nom">the dark wizard</div>
+<!--div pour afficher la selection des personnage-->
+        <div class="selection">
+            <p><input type="button" value="chevalier" id="Chevalier"></p>
+            <p><input type="button" value="chaman" id="chaman"></p>
+            <p><input type="button" value="forgeron" id="forgeron"></p>
+            <p><input type="button" value="valkyrie" id="valkyrie"></p>
+        </div>
+
+<!--div de choix de mon chevalier-->
+        <div id = "attaque">
+            <div class="Chevalier">
+            <p><input type="button" value="Fight" id="fight"></p>
+            <p><input type="button" value="item" id="black"></p>
+            <p><input type="button" value="sortilege" id="summon"></p>
+            <p><input type="button" value="fuite" id="item"></p>
+            </div>
+        </div>
+
+<!--div de choix de mon chaman-->
+        <div id = "attaque2">
+            <div class="chaman">
+            <p><input type="button" value="Fight" id="fight2"></p>
+            <p><input type="button" value="item" id="black"></p>
+            <p><input type="button" value="sortilège" id="summon"></p>
+            <p><input type="button" value="fuite" id="item"></p>
+            </div>
+        </div>
+
+<!--div de choix de mon forgeron-->
+        <div id = "attaque3">
+            <div class="forgeron">
+            <p><input type="button" value="Fight" id="fight3"></p>
+            <p><input type="button" value="item" id="black"></p>
+            <p><input type="button" value="sortilège" id="summon"></p>
+            <p><input type="button" value="fuite" id="item"></p>
+            </div>
+        </div>
+
+<!--div de choix de ma valkyrie-->
+        <div id = "attaque4">
+            <div class="valkyrie">
+            <p><input type="button" value="Fight" id="fight4"></p>
+            <p><input type="button" value="item" id="black"></p>
+            <p><input type="button" value="sortilège" id="summon"></p>
+            <p><input type="button" value="fuite" id="item"></p>
+            </div>
+        </div>
+
+<!--div d'attaque ou defense de mon chevalier-->
+        <div id= "action">
+            <div class="fight">
+            <p><input type="button" value="attaquer" id="attaquer"></p>
+            <p><input type="button" value="defendre" id="defendre"></p>
+            <input type="button" value="retour" id="retour">
+            </div>
+        </div>
+
+<!--div d'attaque ou defense de mon chaman-->
+        <div id= "action2">
+            <div class="fight2">
+            <p><input type="button" value="attaquer" id="attaquer2"></p>
+            <p><input type="button" value="defendre" id="defendre2"></p>
+            <input type="button" value="retour" id="retour2">
+            </div>
+        </div>
+
+<!--div d'attaque ou defense de mon forgeron-->
+        <div id= "action3">
+            <div class="fight3">
+            <p><input type="button" value="attaquer" id="attaquer3"></p>
+            <p><input type="button" value="defendre" id="defendre3"></p>
+            <input type="button" value="retour" id="retour3">
+            </div>
+        </div>
+
+<!--div d'attaque ou defense de ma valkyrie-->
+        <div id= "action4">
+            <div class="fight4">
+            <p><input type="button" value="attaquer" id="attaquer4"></p>
+            <p><input type="button" value="defendre" id="defendre4"></p>
+            <input type="button" value="retour" id="retour4">
+            </div>
+        </div>
+
+<!--div d'affichage des pv de mes personnages-->
+        <div class = "personnage">
+            <h3>chevalier<div id = "viechevalier"> 200 </div><p>defense<div id = "defensechevalier"> </div></p></h3>
+            <h3>chaman <div id = "viechaman">200 <p>defense<div id = "defensechaman"> </div></p></div></h3>
+            <h3>forgeron <div id ="vieforgeron">200 <p>defense<div id = "defenseforgeron"> </div></p></div></h3>
+            <h3>valkyrie <div id="vievalkyrie">200 <p>defense<div id = "defensevalkyrie"> </div></p></div></h3>
+
+        </div>
+
+<!--div pour afficher l'image de mon chevalier-->
+        <div class="perso">
+            <img src="image/SomeCharacters_by_Ragewortt2 (2).png">
+        </div>
+
+<!--div pour afficher l'image de mon chaman-->
+        <div class="perso2"> 
+            <img src="image/SomeCharacters_by_Ragewortt2 (3).png"> 
+        </div>
+
+<!--div pour afficher l'image de mon forgeron-->      
+        <div class="perso3"> 
+            <img src="image/SomeCharacters_by_Ragewortt2 (4).png">
+        </div>
+
+<!--div pour afficher l'image de ma valkyrie-->
+        <div class="perso4"> 
+            <img src="image/SomeCharacters_by_Ragewortt2 (5).png">
+        </div>
+
+<!--div pour afficher l'image de l'ennemi partie 2-->
+        <div class="ennemiPartie2">
+            <img src="image/threeformsPJ2 (2).png" id = ennemiPart2>
+        </div>
+
+<!--div pour afficher l'image de l'ennemi partie 1-->
+        <div class="ennemi1"> 
+            <img src="image/threeformsPrev.png" id ="ennemiPart1">
+        </div>
+
+<!--div pour afficher la vie de l'ennemi partie 1-->
+        <div class="vieennemi">
+            <img src="image/healbars (3).jpg" id="vieennemi1">
+            <div id ="pv">1000</div> 
+        </div>
+
+<!--div pour afficher la vie de l'ennemi partie 2-->
+        <div class="vieEnnemiPartie2">
+            <img src="image/healbars (2).jpg " id="viennemi2">
+        </div>
+
+<!--div pour afficher la boite de dialogue-->
+        <div class="infos" id = "infos">
+            <p><h2>choisisser le hero qui jouera en premier</h2> </p>
+        </div>
+
+    </body>
+    
+
+</html>
